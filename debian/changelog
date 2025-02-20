@@ -1,3 +1,39 @@
+systemd (249.11-0ubuntu3.15) jammy; urgency=medium
+
+  * d/systemd.prerm: call d-s-h update-state for resolved on upgrades
+    (LP: #2078555)
+
+ -- Nick Rosbrook <enr0n@ubuntu.com>  Thu, 20 Feb 2025 08:24:02 -0500
+
+systemd (249.11-0ubuntu3.14) jammy; urgency=medium
+
+  [ Ioanna Alifieraki ]
+  * network: skip to reassign master ifindex if already set
+    (LP: #2003250)
+
+  [ Nick Rosbrook ]
+  * network: do not bring down a bonding port interface when it is already joined
+    (This is a follow-up commit required for LP: 2003250)
+
+  * networkd-test: skip test_resolved_domain_restricted_dns
+    (LP: #2009859)
+
+ -- Nick Rosbrook <enr0n@ubuntu.com>  Mon, 16 Dec 2024 15:23:18 -0500
+
+systemd (249.11-0ubuntu3.13) jammy; urgency=medium
+
+  [ Lukas Märdian ]
+  * Fixing GRE6 and VTI6 on newer kernels (LP: #2037667)
+
+  [ Nick Rosbrook ]
+  * debian/tests/tests-in-lxd: update workaround patch (LP: #2055200)
+
+  [ Chengen Du ]
+  * udev: Handle PTP device symlink properly on udev action 'change'
+    (LP: #2077779)
+
+ -- Nick Rosbrook <enr0n@ubuntu.com>  Thu, 17 Oct 2024 10:26:55 -0400
+
 systemd (249.11-0ubuntu3.12) jammy; urgency=medium
 
   * core/device: ignore DEVICE_FOUND_UDEV bit on switching root (LP: #2037281)
